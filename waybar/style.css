@@ -41,6 +41,10 @@
   border-radius: 1rem;
 }
 
+#workspaces button.urgent {
+  color: @pink;
+}
+
 /* #custom-music, */
 
 #tray,
