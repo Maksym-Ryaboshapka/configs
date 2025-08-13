@@ -19,3 +19,17 @@ progress-color=over #313244
 
 [urgency=high]
 border-color=#fab387
+
+[app-name=kb-switch]
+font=Roboto Mono Nerd Bold 15
+width=500
+padding=25
+anchor=bottom-center
+#border-size=3
+border-radius=16
+#background-color=#89b4fa
+background-color=#74c7ec
+text-color=#1e1e2e
+default-timeout=1500
+outer-margin=30
+group-by=app-name
