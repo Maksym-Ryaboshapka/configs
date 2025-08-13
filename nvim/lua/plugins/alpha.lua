@@ -1,0 +1,36 @@
+return {
+  "goolord/alpha-nvim",
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+    "nvim-lua/plenary.nvim",
+  },
+  config = function()
+    local theta = require "alpha.themes.theta"
+    local dashboard = require "alpha.themes.dashboard"
+    theta.file_icons.provider = "devicons"
+    table.remove(theta.buttons.val, 6) -- Remove Broken Config Button
+    table.remove(theta.buttons.val, 3) -- Remove New-File Button
+    -- Add Shortcut to Chezmoi Configuration File
+    table.insert( 
+      theta.buttons.val,
+      dashboard.button("c", "  Configuration", "<cmd>cd ~/.local/share/chezmoi/<bar> edit ./README.md<cr>")
+    )
+    
+    table.insert(
+      theta.buttons.val,
+      dashboard.button("e", "󱉟  Notes", "<cmd>cd ~/documents/notes<bar> edit ./personal/t-*<CR>")
+    )
+    
+    theta.header.val = {
+      "                                                    ",
+      " ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
+      " ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ",
+      " ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ",
+      " ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ",
+      " ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
+      " ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
+      "            (Configuration by Hudson Liu)           ",
+    }
+    require("alpha").setup(theta.config)
+  end,
+}
