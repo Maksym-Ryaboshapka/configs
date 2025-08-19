@@ -1,0 +1,6 @@
+*{
+    background:       #1e1e2e88;
+    foreground:       #cdd6f4FF;
+    input-background: #31324466;
+    selected:         #89b4fa66;
+}
