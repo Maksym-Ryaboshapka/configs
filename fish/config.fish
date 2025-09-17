@@ -9,8 +9,9 @@ if status is-interactive
     set -g fish_greeting
 
     # Aliases
-    alias ff="fastfetch --logo /home/maksym/.config/fastfetch/logo.png --logo-type kitty-direct --logo-width 22 --logo-height 12"
-    alias ff0="fastfetch --logo /home/maksym/.config/fastfetch/femboy.png --logo-type kitty-direct --logo-width 22 --logo-height 10"
+    # alias ff="fastfetch --logo /home/maksym/.config/fastfetch/logo.png --logo-type kitty-direct --logo-width 22 --logo-height 12"
+    # alias ff0="fastfetch --logo /home/maksym/.config/fastfetch/femboy.png --logo-type kitty-direct --logo-width 22 --logo-height 10"
+    alias ff="fastfetch"
     alias fishreload="source ~/.config/fish/config.fish"
 
     # alias update="sudo pacman -Syu"

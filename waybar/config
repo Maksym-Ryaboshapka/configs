@@ -68,7 +68,7 @@
 
     "memory": {
         "interval": 5,
-        "format": "󰍛 {}%",
+        "format": "   {}%",
         "max-length": 10
     },
     "tray": {
@@ -85,7 +85,7 @@
     "clock": {
         "tooltip-format": "{calendar}",
         "format-alt": "   {:%a, %d %b %Y}",
-        "format": "   {:%H:%M}"
+        "format": "   {:%H:%M}"
     },
     "network": {
         "format-wifi" : "{icon}   {essid}",
@@ -114,7 +114,7 @@
         "scroll-step": 1
     },
     "custom/logo": {
-        "format": "󰣇",
+        "format": "",
         "tooltip": false,
         "on-click": "rofi -show drun &"
     },
