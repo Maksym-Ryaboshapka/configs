@@ -18,6 +18,7 @@
         "network",
         "wireplumber",
         "battery",
+        "custom/notifications",
         "custom/power"
     ],
     "wlr/taskbar": {
@@ -54,18 +55,16 @@
     "custom/music": {
       "format": " ",
       "return-type": "json",
-    //"exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{title}}\"}' -F",
-    "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{title}}\", \"icon\": \"\"}' -F",
-    //"on-click": "playerctl play-pause",
-    "on-click": "playerctl play-pause",
-    "on-click-right": "playerctl next",
-    "on-click-middle": "nohup kitty -e cava >/dev/null 2>&1 &",
-    "tooltip": true,
-    "tooltip-format": "{text}",
-    "escape": true
+      //"exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{title}}\"}' -F",
+      "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{title}}\", \"icon\": \"\"}' -F",
+      //"on-click": "playerctl play-pause",
+      "on-click": "playerctl play-pause",
+      "on-click-right": "playerctl next",
+      "on-click-middle": "nohup kitty -T \"cava-floating\" -e cava >/dev/null 2>&1 &",
+      "tooltip": true,
+      "tooltip-format": "{text}",
+      "escape": true
     },
-
-
     "memory": {
         "interval": 5,
         "format": "   {}%",
@@ -157,6 +156,11 @@
     "custom/power": {
         "format": "󰤆",
         "tooltip": false,
-        "on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh &"
+        "on-click": "wlogout"
+    },
+    "custom/notifications": {
+        "format": "󰂚",
+        "tooltip": false,
+        "on-click": "swaync-client -t"
     }
 }
