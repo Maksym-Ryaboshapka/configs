@@ -3,6 +3,7 @@ if status is-interactive
     set -x LANG ru_RU.UTF-8
     set -x LC_COLLATE C
     set -x LC_NUMERIC ru_RU.UTF-8
+    set -x SSL_CERT_FILE /etc/ssl/certs/ca-certificates.crt
 
     set -U fish_user_paths $HOME/.local/bin $fish_user_paths
 
